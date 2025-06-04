@@ -1,0 +1,17 @@
+## simple solution
+def solution(X, Y, D):
+    distance = Y - X
+    if distance % D == 0:
+        return distance // D
+    else:
+        return (distance // D) + 1
+    
+    print(solution(10, 85, 30))
+
+## sofisticated solution
+import math
+
+def solution(X, Y, D):
+    return math.ceil((Y - X)/D)
+
+    print(solution(10, 85, 30))
