@@ -1,0 +1,7 @@
+def solution(A):
+    unpaired = 0
+    for num in A:
+        unpaired ^= num
+    return unpaired
+
+    print(solution([1, 1, 2, 2, 3]))
