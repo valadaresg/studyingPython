@@ -1,0 +1,7 @@
+def solution(A, K):
+    if K == 0:
+        return A
+    else:
+        return A[-K:] + A[:-K]
+
+    print(solution([1, 2, 3, 4], 5))
