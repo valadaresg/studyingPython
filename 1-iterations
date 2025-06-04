@@ -1,0 +1,20 @@
+def solution(N):
+    # Implement your solution here
+    bit_string = bin(N).split('b')[1] #retorna o número binário
+    gap = 0
+    max_gap = 0 #armazena o maior gap
+    find_one = False #para identificar se está no meio do gap
+
+    for bit in bit_string:
+        if bit == '1':
+            if find_one:
+                if gap > max_gap:
+                    max_gap = gap
+            gap = 0
+            find_one = True
+        elif find_one:
+            gap += 1
+            
+    return(max_gap)
+    
+    print(solution(529))
